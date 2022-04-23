@@ -31,9 +31,7 @@ services:
       context: WebBack/
       dockerfile: Dockerfile
     working_dir: /app/
-    command:
-      - "npm install"
-      - "npm start"
+    command: npm start
     networks:
       - monopoly
     ports:

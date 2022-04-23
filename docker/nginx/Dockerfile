@@ -10,7 +10,7 @@ WORKDIR /usr/share/nginx/html
 
 RUN rm -rf ./*
 
-COPY --from=builder /app /usr/share/nginx/html
+COPY --from=builder /app/dist/ .
 
 RUN rm -rf /etc/nginx/conf.d/default.conf
 RUN rm -rf /etc/nginx/conf.d/example_ssl.conf
