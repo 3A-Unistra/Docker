@@ -71,6 +71,7 @@ services:
     restart: unless-stopped
 
   nginx:
+    image: monopoly-server-nginx
     build:
       context: WebFront
       dockerfile: ../docker/nginx/Dockerfile
