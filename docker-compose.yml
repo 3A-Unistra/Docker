@@ -86,11 +86,10 @@ services:
       - "${NGINX_HTTP_PORT}:${NGINX_HTTP_PORT}"
     env_file:
       - .env
-    depends_on:
-      - asgiserver
     volumes:
       - ./docker/nginx/templates:/etc/nginx/templates
       - ./docker/data/nginx/logs:/var/log/nginx
+      - ./docker/nginx/static:/usr/share/nginx/static
     restart: unless-stopped
     command:
       - "/bin/sh"

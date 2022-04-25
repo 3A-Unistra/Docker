@@ -1,8 +1,13 @@
 # Build front
 FROM node AS builder
 WORKDIR /app/
+
+COPY package*.json /app/
+
+RUN npm install
+
 COPY . /app/
-RUN npm install && npm run build
+RUN npm run build
 
 # Nginx
 FROM nginx
