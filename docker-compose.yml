@@ -27,6 +27,7 @@ services:
     restart: unless-stopped
 
   apiserver:
+    image: monopoly-server-api
     build:
       context: WebBack/
       dockerfile: Dockerfile
