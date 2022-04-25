@@ -41,6 +41,7 @@ services:
     restart: unless-stopped
 
   asgiserver:
+    image: monopoly-server
     build:
       context: server/
       dockerfile: Dockerfile
@@ -58,6 +59,7 @@ services:
     restart: unless-stopped
 
   worker:
+    image: monopoly-server
     build:
       context: server/
       dockerfile: Dockerfile
