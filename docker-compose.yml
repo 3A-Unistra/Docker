@@ -38,8 +38,6 @@ services:
       - "${API_PORT}:${API_PORT}"
     env_file:
       - .env
-    depends_on:
-      - db
     restart: unless-stopped
 
   asgiserver:
@@ -57,9 +55,6 @@ services:
       - .env
     networks:
       - monopoly
-    depends_on:
-      - redis
-      - db
     restart: unless-stopped
 
   worker:
@@ -71,9 +66,6 @@ services:
       - .env
     networks:
       - monopoly
-    depends_on:
-      - redis
-      - db
     restart: unless-stopped
 
   nginx:
