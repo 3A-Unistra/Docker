@@ -16,7 +16,7 @@ server {
         try_files $uri $uri/ /index.html;
     }
 
-    location ~^ /static/ {
+    location ~^ /static {
 
         alias /usr/share/nginx/static;
 
