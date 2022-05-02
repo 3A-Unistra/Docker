@@ -16,9 +16,9 @@ server {
         try_files $uri $uri/ /index.html;
     }
 
-    location ~^ /static {
+    location /static/ {
 
-        alias /usr/share/nginx/static;
+        alias /usr/share/nginx/static/;
 
         # On-disk Brotli-precompressed WebAssembly files:
         location ~ .+\.wasm\.br$ {
