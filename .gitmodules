@@ -1,9 +1,9 @@
 [submodule "server"]
 	path = server
-	url = https://git.unistra.fr/3a/server.git
+	url = https://github.com/3A-Unistra/Server.git
 [submodule "WebBack"]
 	path = WebBack
-	url = https://git.unistra.fr/3a/WebBack.git
+	url = https://github.com/3A-Unistra/WebBack.git
 [submodule "WebFront"]
 	path = WebFront
-	url = https://git.unistra.fr/3a/WebFront.git
+	url = https://github.com/3A-Unistra/WebFront.git
